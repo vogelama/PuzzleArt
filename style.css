@@ -7,6 +7,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
+  height: 100%;
 	color: rgba(0, 0, 0, .85);
 	font-size: .9em;
 	font-family: helvetica, sans-serif; 
@@ -58,13 +59,9 @@ body {
 	color: #B741BF;
 }
 
-#nav-bar a:active {
-	background-color: #B741BF;
-	color: white;
-}
-
 #banner {
-	margin-bottom: 50px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	margin-top: 35px;
 	background-color: rgba(183, 65, 191, .1);
 }
@@ -125,10 +122,10 @@ body {
 #benefits {
 	text-align: center;
 	font-size: 1.1em;
-	margin-bottom: 25px;
 }
 
 #benefits h2 {
+	padding-top: 75px;
 	font-size: 1.85em;
 	margin-bottom: 5px;
 }
@@ -168,17 +165,18 @@ body {
 	margin: auto;
 	height: 300px;
 	width: 100%;
-	margin-bottom: 40px;
+	margin-top: 30px;
 }
 
 .flex-container {
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  margin-top: 50px;
+  margin-top: 25px;
 }
 
 #products h2 {
+	padding-top: 75px;
 	font-size: 2em;
 	display: block;
 	margin: auto;
@@ -245,7 +243,12 @@ body {
 	background-color: rgba(183, 65, 191, .10);
 	width: 100%;
 	margin-bottom: 100px;
-	margin-top: 50px;
+	margin-top: 100px;
+	padding-top: 40px;
+	padding-right: 15px;
+	padding-left: 15px;
+	padding-bottom: 30px;
+	width: 100%;
 }
 
 .form-group {
@@ -256,8 +259,9 @@ body {
 
 #contact h2 {
 	font-size: 1.75em;
-	margin-top: 40px;
+	margin-top: 15px;
 	margin-bottom: 30px;
+	text-align: center;
 }
 
 #name-label, #email-label {
@@ -282,20 +286,29 @@ body {
   	font-size: 16px;
   	border: none;
   	padding: 10px 50px;
+  	display: block;
+	margin: auto;
 }
 
 #contact p {
-	margin-bottom: 30px;
 	font-size: 1.1em;
+	text-align: center;
 
 }
 
 @media (max-width: 575px) {
+	#all-content {
+			margin-top: 150px; 
+			height: calc(100vh - 150px);
+			overflow: auto;
+		}
+
 	#header {
 		position: fixed;
 		top: 0;
 		width: 100%;
-		height: 195px;
+		height: 175px;
+		padding-bottom: 20px;
 		background-color: white;
 		border-bottom: 2px solid rgba(183, 65, 191, 1);
 	}
@@ -323,9 +336,9 @@ body {
 		font-size: 17px;
 		display: block;
 		text-align: center;
-	  padding: 5px 10px;
-	  text-decoration: none;
-	  color: rgba(0, 0, 0, 1);
+		padding: 5px 10px;
+		text-decoration: none;
+		color: rgba(0, 0, 0, 1);
 	}
 
 	#nav-bar a:hover {
@@ -338,90 +351,43 @@ body {
 		background-color: white;
 		color: #B741BF;
 	}
-
-	#banner {
-		margin-bottom: 50px;
-		margin-top: 160px;
-		background-color: rgba(183, 65, 191, .1);
 	}
 
-	#banner:before {
-	  content: "";
-	  display: inline-block;
-	  vertical-align: middle;
-	  height: 100%;
-	}
-
-	.bannerinner {
-		display: inline-block;
-	  	vertical-align: middle;
-	}
-
-	#banner img {
-		width: 75%;
-		margin: auto;
-		display: block;	
-		margin-top: 50px;
-		margin-bottom: 0;
-	}
-
-	#banner p {
-		line-height: 1.2em;
-		font-size: 1.3em;
-
-	}
-
-	#banner h1 {
-		font-size: 2.5em;
-		margin-bottom: 0;
-	}
-
-	#header-text {
-		width: 75%;
-		display: block;	
-		margin: auto;
-		margin-top: -15px;
-		font-size: 15px;
-		text-align: center;
-	}
-
-	#banner-button {
-	  background-color: #B741BF; 
-	  color: white;
-	  padding: 10px;
-	  text-align: center;
-	  font-size: 16px;
-	  border: none;
-	  padding: 10px 30px;
-	  margin-bottom: 60px;
-	}
-
-	.flex-container {
-	  display: flex;
-	  flex-wrap: wrap;
-	  text-align: center;
-	  margin-top: 60px;
-	}
-
-	.box1 {
-	  width: 100%;
-	  font-size: 30px;
-	  border: 2px solid rgba(183, 65, 191, 1);
-	  margin: auto;
-	  display: block;
-	  margin-bottom: 50px;
-	}
-
-	.box2 {
-	  width: 100%;
-	  font-size: 30px;
-	  border: 2px solid rgba(183, 65, 191, 1);
-	  margin: auto;
-	  display: block;
-	}
-
-	
-
+ @media (max-width: 700px) {
+ .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
 }
+
+#products h2 {
+	font-size: 2em;
+	display: block;
+	margin: auto;
+	width: 100%;
+	margin-bottom: 25px;
+}
+
+.box1 {
+  width: 100%;
+  font-size: 30px;
+  border: 2px solid rgba(183, 65, 191, 1);
+  margin: 10px;
+  display: block;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+.box2 {
+  width: 100%;
+  font-size: 30px;
+  border: 2px solid rgba(183, 65, 191, 1);
+  margin: 10px;
+  display: block;
+  margin: auto;
+}
+
+ }
+
 
 </style>
